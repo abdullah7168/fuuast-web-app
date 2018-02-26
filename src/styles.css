@@ -1,3 +1,4 @@
+
 /* You can add global styles to this file, and also import other style files */
 /* layout */
 body{
@@ -54,6 +55,41 @@ input[type=radio]{
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.bg-primary{
+    background:#33FF52;
+}
+.txt-primary{
+    color:#33FF52;
+}
 
 
 
