@@ -1,0 +1,9 @@
+
+<div class="card--custom">
+    <div *ngIf="verificationreply != undefined" class="tile">
+      <p>Status {{verificationreply.request_status}}</p>
+      <p>Status {{verificationreply.notes}}</p>
+    </div>
+    <button class="btn btn-primary" (click)="seenNotify(verificationreply.id)">Ok</button>    
+</div>
+  

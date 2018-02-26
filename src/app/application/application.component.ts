@@ -15,15 +15,30 @@ import 'rxjs/add/operator/toPromise';
 export class ApplicationComponent implements OnInit {
   student:any;
   student_details:any;
-
+  notification:any;
   constructor(public http: Http,private router: Router,) { 
     var me = JSON.parse(localStorage.getItem('currentsuer'));
     this.student = me;
     console.log(me)
     console.log(this.student);
+    this.student.shift = '1';
+    this.student.dpt_abbr = 'CS';
+    
    }
 
   ngOnInit() {
   }
+
+  sendApplication(){
+
+    let params = new URLSearchParams;
+    params.append('student_id',this.student.id);
+    this.http.post('http://localhost:8080/laravel/public/api/degree-verification',params)
+             .map(res => res.json())
+             .subscribe((data) => {
+                console.log('data');
+             });
+  }
+
 
 }

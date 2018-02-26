@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { ApplicationComponent } from './application/application.component';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
+import { RepliesComponent } from './replies/replies.component';
 
 
 
@@ -14,6 +15,7 @@ import { RouterModule, Routes } from '@angular/router';
 const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'app-request',component: ApplicationComponent },
+  { path: 'app-replies/:id',component: RepliesComponent },
   { path: '**', component: LoginComponent }
 ];
 
@@ -23,6 +25,7 @@ const appRoutes: Routes = [
     AppComponent,
     LoginComponent,
     ApplicationComponent,
+    RepliesComponent,
   ],
   imports: [
     BrowserModule,
